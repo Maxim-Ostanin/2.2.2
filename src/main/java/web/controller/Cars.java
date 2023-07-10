@@ -21,7 +21,7 @@ public class Cars {
 
     @GetMapping(value = "/cars")
     public String showListOfCars(@RequestParam(value = "count", defaultValue = "5") int count, ModelMap model) {
-        model.addAttribute("carsList", carService.getListCar(count));
+        model.addAttribute("carsList", carService.getNewLengthCarList(count));
         return "cars";
     }
 }
